@@ -1,2 +1,2 @@
 # guswkd000.github.io
-my personal website
+Learning Github is fun.
