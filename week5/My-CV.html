@@ -3,15 +3,56 @@
 <head>
   <meta charset="UTF-8">
   <title>CV - Lo Thi Huyen Trang</title>
+  <style>
+    /* Style for nav bar */
+    nav {
+      background-color: #333;
+      overflow: hidden;
+    }
+    nav a {
+      float: left;
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 14px 20px;
+      text-decoration: none;
+    }
+    nav a:hover {
+      background-color: #575757;
+    }
+    /* Style for body */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    section {
+      padding: 20px;
+      margin: 20px;
+      background: #f2f2f2;
+      border-radius: 8px;
+    }
+  </style>
 </head>
 <body>
+
+  <!-- Navigation Bar -->
+  <nav>
+    <a href="#personal">Personal Information</a>
+    <a href="#education">Education</a>
+    <a href="#experience">Experience</a>
+    <a href="#skills">Skills</a>
+    <a href="#video">Video</a>
+  </nav>
+
   <header>
-    <h2 style="color: purple;">Lo Thi Huyen Trang</h2>
-    <p>Email: 23070828@vnu.edu.vn | Phone number: 0977 256 650</p>
+    <h2 style="color: purple; margin-left:20px;">Lo Thi Huyen Trang</h2>
+    <p style="margin-left:20px;">Email: 23070828@vnu.edu.vn | Phone number: 0977 256 650</p>
   </header>
 
+  <!-- Main content -->
   <main>
-    <section>
+    <section id="personal">
       <h3 style="color: green;">I. Personal Information</h3>
       <details>
         <summary>Details</summary>
@@ -22,7 +63,7 @@
       </details>
     </section>
 
-    <section>
+    <section id="education">
       <h3 style="color: red;">II. Education</h3>
       <details>
         <summary>Details</summary>
@@ -40,19 +81,19 @@
       </details>
     </section>
 
-    <section>
-      <h3 style="color: beige;">III. Experience</h3>
+    <section id="experience">
+      <h3 style="color: blueviolet;">III. Experience</h3>
       <details>
         <summary>Details</summary>
         <ul type="disc">
           <li>Tutor</li>
-          <li>Data Analyst  
+          <li>Data Analyst</li>
         </ul>
       </details>
     </section>
 
-    <section>
-      <h3 style="color: greenyellow;">IV. Skills</h3>
+    <section id="skills">
+      <h3 style="color: goldenrod;">IV. Skills</h3>
       <details>
         <summary>Details</summary>
         <ul>
@@ -63,20 +104,21 @@
       </details>
     </section>
     
-    <section>
-      <h3 style="color: aquamarine;">V. Video</h3>
+    <section id="video">
+      <h3 style="color: blue;">V. Video</h3>
       <p>This is a funny cartoon which I really like watching when I was a little girl.</p>
       <iframe width="560" height="315" 
-      src="https://www.youtube.com/embed/vrMrXeM1WB8"              title="YouTube video player" 
-              frameborder="0" 
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-              allowfullscreen>
+        src="https://www.youtube.com/embed/vrMrXeM1WB8"
+        title="YouTube video player" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen>
       </iframe>
     </section>
   </main>
 
-  <footer>
+  <footer style="text-align:center; padding:20px; background:#333; color:white;">
     <p>&copy; 2025 Lo Thi Huyen Trang</p>
   </footer>
+
 </body>
 </html>
