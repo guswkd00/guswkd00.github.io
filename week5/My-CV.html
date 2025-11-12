@@ -91,7 +91,7 @@
         </ul>
       </details>
     </section>
-
+    
     <section id="skills">
       <h3 style="color: goldenrod;">IV. Skills</h3>
       <details>
@@ -103,9 +103,56 @@
         </ul>
       </details>
     </section>
-    
+
+    <section id="contact">
+  <h3 style="color: brown;">V. Contact</h3>
+  <details>
+    <summary>Details</summary>
+    <form>
+  <form>
+    <h2>Contact Us</h2>
+
+    <label for="your_name">Full name *</label>
+    <input type="text" id="your_name" name="your_name" required placeholder="First and Last Name">
+
+    <label for="your_email">Email *</label>
+    <input type="email" id="your_email" name="your_email" required placeholder="your@email.com">
+
+    <label for="gender">Gender</label>
+    <select name="gender" id="gender">
+      <option value="male">Male</option>
+      <option value="female">Female</option>
+      <option value="other" selected>Other</option>
+    </select>
+
+    <label for="courses_attended">Select courses attended</label>
+    <input type="checkbox" id="course1" name="courses_attended" value="course1"> Course 1
+    <br>
+    <input type="checkbox" id="course2" name="courses_attended" value="course2"> Course 2
+
+    <label>Your preferred contact method</label>
+    <input type="radio" id="contact_email" name="preferred_contact" value="email"> Email
+    <input type="radio" id="contact_phone" name="preferred_contact" value="phone"> Phone
+
+    <label for="file">Attach Files</label>
+    <input type="file" id="file" name="file">
+    <div class="note">Attach up to 10 files. Maximum size 20MB each.</div>
+
+    <label for="large_text">Message</label>
+    <textarea id="large_text" name="large_text" rows="5" placeholder="Type your message here..."></textarea>
+
+    <div class="btn-container">
+      <input type="submit" value="Send">
+      <input type="reset" value="Reset">
+    </div>
+  </form>
+
+  </details>
+</section>
+
+
     <section id="video">
-      <h3 style="color: blue;">V. Video</h3>
+      <h3 style="color: blue;">VI. Video</h3>
       <p>This is a funny cartoon which I really like watching when I was a little girl.</p>
       <iframe width="560" height="315" 
         src="https://www.youtube.com/embed/vrMrXeM1WB8"

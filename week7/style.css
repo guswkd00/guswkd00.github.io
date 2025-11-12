@@ -1,0 +1,138 @@
+/* CSS Document */
+body {
+    margin: auto;
+    padding: 0px;
+    background: #CCCCCC;
+    font-family: Verdana, Geneva, sans-serif;
+    font-size: 12px;
+}
+
+#wrap {
+    background: #ffffff;
+    margin: auto;
+    width: 900px;
+    height: auto;
+}
+
+/* HEADER */
+header {
+    background: url(images/header.jpg);
+    height: 181px;
+    width: 900px;
+}
+
+#logo {
+    padding: 20px 0 0 50px;
+}
+
+#menu_top {
+    margin-top: 55px;
+    margin-left: 30px;
+    background: #ffffff;
+    height: 40px;
+    opacity: 0.6;
+    border-radius: 10px 0px 0px 10px;
+}
+
+.level1 {
+    clear: both;
+    list-style-type: none;
+    padding-top: 12px;
+    opacity: 1.0;
+    color: #000;
+    position: relative;
+}
+
+.level1 li {
+    display: inline;
+    float: left;
+    padding: 0px 20px 0px 0px;
+    height: 27px;
+    font-weight: bold;
+}
+
+.level1 li a,
+.level1 li a:visited {
+    color: red;
+    text-decoration: none;
+}
+
+.level1 li a:hover {
+    color: green;
+}
+
+.level2 {
+    display: none;
+    position: absolute;
+    padding: 0px;
+    margin-top: 11px;
+}
+
+.level1 li:hover > .level2 {
+    display: block;
+}
+
+.level2 li {
+    float: none;
+    position: relative;
+    display: block;
+    padding: 10px;
+    height: auto;
+    background: #ccc;
+}
+
+.level2 li:hover {
+    background: #cc0;
+}
+
+/* BANNER */
+#banner {
+    background: #ffefef;
+    padding: 20px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    color: #800000;
+}
+
+/* NEW PRODUCT */
+#newproduct {
+    padding: 20px;
+}
+
+#newproduct .product {
+    float: left;
+    width: 45%;
+    margin: 10px;
+    text-align: center;
+}
+
+#newproduct img {
+    width: 150px;
+    height: 150px;
+}
+
+/* PROMOTION */
+#promotion {
+    clear: both;
+    background: #f9f9f9;
+    padding: 20px;
+    border-top: 1px solid #ccc;
+}
+
+/* CATALOG */
+#catalog {
+    padding: 20px;
+}
+
+#catalog ul {
+    list-style-type: square;
+}
+
+/* FOOTER */
+#footer {
+    background: #000;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+}
