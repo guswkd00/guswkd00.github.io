@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Computer Parts</title>
+<style>
+    table {
+        border-collapse: collapse;
+        padding: 10px;
+    }
+    td, th {
+        border: 1px solid black;
+        padding: 10px;
+    }
+</style>
+</head>
+<body>
+
+<h2>Computer Parts &copy; &trade; &bull; </h2>
+
+<table id="partsTable">
+<tr><th>Part</th><th>Price</th></tr>
+<tr><td>CPU</td><td>$200</td></tr>
+<tr><td>RAM</td><td>$80</td></tr>
+<tr><td>SSD</td><td>$120</td></tr>
+<tr><td>GPU</td><td>$400</td></tr>
+</table>
+
+<button onclick="changeColor()">Change Color</button>
+
+<script>
+function changeColor() {
+    document.getElementById("partsTable").style.color = "red";
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Newsletter</title>
+<style>
+form {
+    display: grid;
+    gap: 10px;
+    width: 300px;
+}
+</style>
+</head>
+<body>
+
+<form onsubmit="return validate()">
+    <input type="text" id="fullname" placeholder="Full Name">
+    <input type="email" id="email">
+
+    <label><input type="radio" name="type"> Monthly</label>
+    <label><input type="radio" name="type"> Yearly</label>
+
+    <label><input type="checkbox" class="interest"> Tech</label>
+    <label><input type="checkbox" class="interest"> Business</label>
+
+    <button>Subscribe</button>
+</form>
+
+<p id="success"></p>
+
+<script>
+function validate() {
+    let interests = document.getElementsByClassName("interest");
+    let checked = false;
+
+    for (let i of interests) {
+        if (i.checked) checked = true;
+    }
+
+    if (!email.value.includes("@") || !checked) {
+        alert("Invalid form");
+        return false;
+    }
+
+    success.textContent = "Subscription successful!";
+    return false;
+}
+</script>
+
+</body>
+</html>

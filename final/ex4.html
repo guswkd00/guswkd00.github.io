@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Restaurant Menu</title>
+</head>
+<body>
+
+<h2>Menu</h2>
+
+<div class="item veg">Salad &reg; &ge; $5</div>
+<div class="item">Steak &sect; &ge; $15</div>
+<div class="item veg">Vegetarian Pizza &ge; $10</div>
+<div class="item">Chicken Burger &ge; $8</div>
+
+<button onclick="filterMenu()">Filter Menu</button>
+
+<script>
+let showVeg = false;
+
+function filterMenu() {
+    let items = document.getElementsByClassName("item");
+    showVeg = !showVeg;
+
+    for (let item of items) {
+        if (showVeg && !item.classList.contains("veg")) {
+            item.style.display = "none";
+        } else {
+            item.style.display = "block";
+        }
+    }
+}
+</script>
+
+</body>
+</html>

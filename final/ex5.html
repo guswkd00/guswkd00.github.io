@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Tabs</title>
+<style>
+    .tab { cursor: pointer; padding: 10px; }
+    .active { font-weight: bold; }
+    .content { display: none; }
+</style>
+</head>
+<body>
+
+<div>
+    <span class="tab active" onclick="switchTab(0)">Features ® →</span>
+    <span class="tab" onclick="switchTab(1)">Pricing €</span>
+    <span class="tab" onclick="switchTab(2)">Reviews</span>
+    <span class="tab" onclick="switchTab(3)">Support</span>
+</div>
+
+<div class="content" style="display:block;">Features Content</div>
+<div class="content">Pricing Content</div>
+<div class="content">Reviews Content</div>
+<div class="content">Support Content</div>
+
+<script>
+function switchTab(index) {
+    let tabs = document.getElementsByClassName("tab");
+    let contents = document.getElementsByClassName("content");
+
+    for (let i = 0; i < tabs.length; i++) {
+        tabs[i].classList.remove("active");
+        contents[i].style.display = "none";
+    }
+
+    tabs[index].classList.add("active");
+    contents[index].style.display = "block";
+}
+</script>
+
+</body>
+</html>

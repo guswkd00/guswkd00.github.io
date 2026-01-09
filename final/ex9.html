@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Products</title>
+<style>
+.container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+.card {
+    padding: 10px;
+    box-shadow: 2px 2px 5px gray;
+}
+.card:hover {
+    transform: scale(1.05);
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+    <div class="card"><h3>Phone ®</h3><p class="price">€500</p><p>Smart device →</p></div>
+    <div class="card"><h3>Laptop</h3><p class="price">€900</p><p>Portable computer →</p></div>
+    <div class="card"><h3>Tablet</h3><p class="price">€300</p><p>Touch screen →</p></div>
+    <div class="card"><h3>Headphones</h3><p class="price">€100</p><p>Audio device →</p></div>
+</div>
+
+<button onclick="togglePrice()">Toggle Price</button>
+
+<script>
+function togglePrice() {
+    let prices = document.getElementsByClassName("price");
+    for (let p of prices) {
+        p.style.display = p.style.display === "none" ? "block" : "none";
+    }
+}
+</script>
+
+</body>
+</html>

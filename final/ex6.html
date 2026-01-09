@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Navigation</title>
+<style>
+.hidden { display: none; }
+</style>
+</head>
+<body>
+
+<button onclick="toggleMenu()">Toggle Menu</button>
+
+<nav id="menu">
+    Home • Books © • Authors ™ • Contact
+</nav>
+
+<script>
+function toggleMenu() {
+    document.getElementById("menu").classList.toggle("hidden");
+}
+</script>
+
+</body>
+</html>
