@@ -8,10 +8,10 @@
 
 <h2>Menu</h2>
 
-<div class="item veg">Salad &reg; &ge; $5</div>
-<div class="item">Steak &sect; &ge; $15</div>
-<div class="item veg">Mango &ge; $10</div>
-<div class="item">Wine &ge; $8</div>
+<div class="item">Chicken wings &reg; &ge; $15</div>
+<div class="item">Beef Steak &sect; &ge; $20</div>
+<div class="item veg">Salad &ge; $10</div>
+<div class="item veg">Apple Juice &ge; $8</div>
 
 <button onclick="filterMenu()">Filter Menu</button>
 
@@ -20,7 +20,7 @@ let showVeg = false;
 
 function filterMenu() {
     let items = document.getElementsByClassName("item");
-    showVeg = !showVeg;
+    showVeg =!showVeg; 
 
     for (let item of items) {
         if (showVeg && !item.classList.contains("veg")) {

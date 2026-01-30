@@ -6,19 +6,19 @@
 <style>
     table { border-collapse: collapse; }
     td, th { border: 1px solid black; padding: 8px; }
-    tr:nth-child(even) { background-color: #f2f2f2; }
+    tr:nth-child(even) { background-color: lightgreen; }
 </style>
 </head>
-<body>
+<body> 
 
 <h2>Student Grades &reg; &sect; &ge;</h2>
 
 <table>
 <tr><th>Subject</th><th>Grade</th></tr>
-<tr><td>Math</td><td class="grade">80</td></tr>
-<tr><td>Physics</td><td class="grade">75</td></tr>
-<tr><td>Chemistry</td><td class="grade">90</td></tr>
-<tr><td>English</td><td class="grade">85</td></tr>
+<tr><td>Math</td><td class="grade">8</td></tr>
+<tr><td>Physics</td><td class="grade">7</td></tr>
+<tr><td>Chemistry</td><td class="grade">9</td></tr>
+<tr><td>English</td><td class="grade">8</td></tr>
 </table>
 
 <button onclick="calculateAverage()">Calculate Average</button>
@@ -32,7 +32,7 @@ function calculateAverage() {
     document.getElementById("result").textContent =
         "Average Grade: " + (sum / grades.length);
 }
-</script>
+</script>6
 
 </body>
 </html>

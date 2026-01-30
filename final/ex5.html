@@ -3,37 +3,78 @@
 <head>
 <meta charset="UTF-8">
 <title>Tabs</title>
+
 <style>
-    .tab { cursor: pointer; padding: 10px; }
-    .active { font-weight: bold; }
-    .content { display: none; }
+    .tab {
+        cursor: pointer;
+        padding: 10px;
+        color: black;
+    }
+
+    .tab.active {
+        color: red;
+        font-weight: bold; 
+    }
+
+    .arrow {
+        display: none;
+        margin-left: 5px;
+    }
+
+    .tab.active .arrow {
+        display: inline; 
+    } 
+
+    .content {
+        display: none; 
+        color: black; 
+    }
+
+    .content.active { 
+        display: block; 
+        color: red; 
+    }
 </style>
 </head>
+
 <body>
 
 <div>
-    <span class="tab active" onclick="switchTab(0)">Features ® →</span>
-    <span class="tab" onclick="switchTab(1)">Pricing €</span>
-    <span class="tab" onclick="switchTab(2)">Reviews</span>
-    <span class="tab" onclick="switchTab(3)">Support</span>
+    <span class="tab active" onclick="switchTab(0)"> 
+        Features &reg;<span class="arrow">&rarr;</span>
+    </span>
+
+    <span class="tab" onclick="switchTab(1)"> 
+        Pricing &euro;<span class="arrow">&rarr;</span>
+    </span>
+
+    <span class="tab" onclick="switchTab(2)">
+        Reviews<span class="arrow">&rarr;</span>
+    </span>
+
+    <span class="tab" onclick="switchTab(3)">
+        Support<span class="arrow">&rarr;</span>
+    </span>
 </div>
 
-<div class="content" style="display:block;">Features Content</div>
+<div class="content active">Features Content</div> 
 <div class="content">Pricing Content</div>
 <div class="content">Reviews Content</div>
 <div class="content">Support Content</div>
 
 <script>
-function switchTab(index) {
-    let tabs = document.getElementsByClassName("tab");
-    let contents = document.getElementsByClassName("content");
+function switchTab(index) { <!-- Added function to switch tabs -->
+    let tabs = document.getElementsByClassName("tab"); <!-- Get all tab elements -->
+    let contents = document.getElementsByClassName("content"); <!-- Get all content elements -->
 
     for (let i = 0; i < tabs.length; i++) {
         tabs[i].classList.remove("active");
+        contents[i].classList.remove("active");
         contents[i].style.display = "none";
     }
 
     tabs[index].classList.add("active");
+    contents[index].classList.add("active");
     contents[index].style.display = "block";
 }
 </script>

@@ -11,8 +11,8 @@
         width: 300px;
         gap: 10px;
     }
-    .strength {
-        font-weight: bold;
+    .strength { <!-- Added style for password strength indicator -->
+        font-weight: bold; <!-- Bold text for emphasis -->
     }
 </style>
 </head>
@@ -24,11 +24,11 @@
     <label>Username:</label>
     <input type="text" id="username" minlength="5" maxlength="15" required>
 
-    <label>Password:</label>
+    <label>Password:</label> 
     <input type="password" id="password" onkeyup="checkStrength()" required>
     <span id="strength" class="strength"></span>
 
-    <label>Profile Picture:</label>
+    <label>Profile Picture:</label> 
     <input type="file" accept=".jpg,.png">
 
     <button type="submit">Register</button>
@@ -39,7 +39,7 @@ function checkStrength() {
     let pwd = document.getElementById("password").value;
     let strength = document.getElementById("strength");
 
-    if (pwd.length < 6) {
+    if (pwd.length < 6) { //
         strength.textContent = "Weak";
     } else if (/[0-9]/.test(pwd) && /[a-zA-Z]/.test(pwd)) {
         strength.textContent = "Strong";

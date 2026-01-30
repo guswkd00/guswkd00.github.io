@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>User Registration</title>
+<style>
+    body { font-family: Arial; }
+    form {
+        display: flex;
+        flex-direction: column;
+        width: 300px;
+        gap: 10px;
+    }
+    .strength { 
+        font-weight: bold; 
+    }
+</style>
+</head>
+<body>
+
+<h2>User Registration</h2>
+
+<form onsubmit="return validateForm()">
+    <label>Username:</label> 
+    <input type="text" id="username" minlength="5" maxlength="15" required>
+
+    <label>Password:</label> 
+    <input type="password" id="password" onkeyup="checkStrength()" required>
+    <span id="strength" class="strength"></span> 
+
+    <label>Confirm Password:</label>
+    <input type="password" id="confirmPassword" required>
+    
+    <label>Profile Picture:</label> 
+    <input type="file" accept=".jpg,.png">
+
+    <button type="submit">Register</button>
+</form>
+
+<script>
+function checkStrength() {
+    let pwd = document.getElementById("password").value;
+    let strength = document.getElementById("strength");
+
+    if (pwd.length < 6) { 
+        strength.textContent = "Weak";
+    } 
+    else if (pwd.length < 10) {
+        strength.textContent = "Medium";
+    } 
+    else {
+        strength.textContent = "Strong";
+    }
+}
+
+function validateForm() {
+    let pwd = document.getElementById("password").value;
+    let confirmPwd = document.getElementById("confirmPassword").value;
+
+    // Password must contain numbers and letters
+    if (!(/[a-zA-Z]/.test(pwd) && /\d/.test(pwd))) {
+        alert("Password must contain both letters and numbers");
+        return false;
+    }
+
+    // Password must match
+    if (pwd !== confirmPwd) {
+        alert("Passwords do not match");
+        return false;
+    }
+
+    alert("Registration successful!");
+    return true;
+}
+</script>
+
+</body>
+</html>

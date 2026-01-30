@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>User Registration</title>
+<style>
+    body { font-family: Arial; }
+    form {
+        display: flex; /* phần tử bên trong xếp theo chiều ngang */
+        flex-direction: column; /* phần tử bên trong xếp theo chiều dọc */
+        width: 300px;
+        gap: 10px;
+    }
+    .strength { 
+        font-weight: bold; 
+    }
+</style>
+</head>
+<body>
+
+<h2>User Registration</h2>
+
+<form>
+    <label>Username:</label> 
+    <input type="text" id="username" minlength="5" maxlength="15" required>
+
+    <label>Password:</label> 
+    <input type="password" id="password" required>
+
+    <label>Confirm Password:</label>
+    <input type="password" id="confirm" required>
+    <span id="error" class="strength" style="color:red"></span>
+
+    <label>Profile Picture:</label> 
+    <input type="file" accept=".jpg,.png">
+
+    <button type="submit">Register</button>
+</form>
+
+<script>
+document.querySelector('form').addEventListener('submit', function(e) {
+    var pwd = document.getElementById('password').value;
+    var confirm = document.getElementById('confirm').value;
+    var error = document.getElementById('error');
+    // Kiểm tra mật khẩu phải trùng khớp
+    if (pwd !== confirm) {
+        error.textContent = 'Passwords must match.';
+        e.preventDefault();
+        return;
+    }
+    // Kiểm tra mật khẩu phải có cả số và chữ
+    if (!(/[0-9]/.test(pwd) && /[a-zA-Z]/.test(pwd))) {
+        error.textContent = 'Password must contain both numbers and letters.';
+        e.preventDefault();
+        return;
+    }
+    error.textContent = '';
+});
+</script>
+
+</body>
+</html>

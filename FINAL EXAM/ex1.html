@@ -2,32 +2,32 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Products</title>
+<title>Products Showcase</title>
 <style>
-.container {
-    display: grid;
+.products {
+    display: grid; 
     grid-template-columns: repeat(4, 1fr); 
     gap: 15px; 
 }
 .card {
-    padding: 10px;
+    padding: 10px; 
     box-shadow: 2px 2px 5px gray; 
 }
 .card:hover {
-    transform: translateY(-10px);
+    transform: translateY(-20px); 
 }
 </style>
 </head>
 <body>
 
-<div class="container">
-    <div class="card"><h3>Phone &copy;</h3><p class="price">&euro;500</p><p>Smart device &reg;</p></div>
+<div class="products">
+    <div class="card"><h3>Phone &ge;</h3><p class="price">&euro;500</p><p>Smart device &reg;</p></div>
     <div class="card"><h3>Laptop</h3><p class="price">&euro;900</p><p>Portable computer &reg;</p></div>
     <div class="card"><h3>Tablet</h3><p class="price">&euro;300</p><p>Touch screen &reg;</p></div>
     <div class="card"><h3>Headphones</h3><p class="price">&euro;100</p><p>Audio device &reg;</p></div>
 </div>
 
-<button onclick="togglePrice()">Toggle Price</button>
+<button onclick="togglePrice()">Toggle Price</button> 
 
 <script>
 function togglePrice() {
@@ -37,6 +37,5 @@ function togglePrice() {
     }
 }
 </script>
-
 </body>
 </html>
